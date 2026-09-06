@@ -1,4 +1,4 @@
-# grill-me-spec
+# <img src="assets/icon.svg" width="96" valign="middle" alt="grill-me-spec icon"/> grill-me-spec
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
