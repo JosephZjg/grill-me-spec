@@ -49,11 +49,11 @@ grill-me-spec 不替代 `explore`、`apply`、`archive`，它替代的是 `propo
 一行命令安装 —— 自动探测 claude/codex/zcode（要显式指定可追加 `-s -- --tool <名称>` 或 `-s -- --dest <路径>`）：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zhoujugui-web/grill-me-spec/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/JosephZjg/grill-me-spec/main/install.sh | bash
 ```
 
 ```powershell
-irm https://raw.githubusercontent.com/zhoujugui-web/grill-me-spec/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/JosephZjg/grill-me-spec/main/install.ps1 | iex
 ```
 
 兼容 macOS（系统自带 bash 3.2+）、Linux、Git Bash 和 Windows PowerShell 5.1+。
@@ -61,9 +61,9 @@ irm https://raw.githubusercontent.com/zhoujugui-web/grill-me-spec/main/install.p
 或者直接 clone 到你的 agent skills 目录：
 
 ```bash
-git clone https://github.com/zhoujugui-web/grill-me-spec ~/.claude/skills/grill-me-spec   # Claude Code
-git clone https://github.com/zhoujugui-web/grill-me-spec ~/.codex/skills/grill-me-spec   # Codex
-git clone https://github.com/zhoujugui-web/grill-me-spec ~/.zcode/skills/grill-me-spec   # ZCode
+git clone https://github.com/JosephZjg/grill-me-spec ~/.claude/skills/grill-me-spec   # Claude Code
+git clone https://github.com/JosephZjg/grill-me-spec ~/.codex/skills/grill-me-spec   # Codex
+git clone https://github.com/JosephZjg/grill-me-spec ~/.zcode/skills/grill-me-spec   # ZCode
 ```
 
 > 国内网络建议改用 [Gitee 镜像](https://gitee.com/gather_limon/grill-me-spec)：把上面的 GitHub 地址换成 `https://gitee.com/gather_limon/grill-me-spec` 即可。

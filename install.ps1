@@ -16,7 +16,7 @@ if (-not $repo -or -not (Test-Path "$repo\SKILL.md")) {
   $tmp = Join-Path ([IO.Path]::GetTempPath()) ("grill-me-spec-" + [IO.Path]::GetRandomFileName())
   New-Item -ItemType Directory -Force -Path $tmp | Out-Null
   $zip = Join-Path $tmp "grill-me-spec.zip"
-  Invoke-WebRequest "https://github.com/zhoujugui-web/grill-me-spec/archive/refs/heads/main.zip" -OutFile $zip
+  Invoke-WebRequest "https://github.com/JosephZjg/grill-me-spec/archive/refs/heads/main.zip" -OutFile $zip
   Expand-Archive $zip -DestinationPath $tmp -Force
   $repo = Join-Path $tmp "grill-me-spec-main"
 }

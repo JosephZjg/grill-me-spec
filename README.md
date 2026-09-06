@@ -50,11 +50,11 @@ grill-me-spec does not replace `explore`, `apply`, or `archive`. It replaces the
 One-liner — auto-detects claude/codex/zcode (append `-s -- --tool <name>` or `-s -- --dest <path>` to choose explicitly):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zhoujugui-web/grill-me-spec/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/JosephZjg/grill-me-spec/main/install.sh | bash
 ```
 
 ```powershell
-irm https://raw.githubusercontent.com/zhoujugui-web/grill-me-spec/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/JosephZjg/grill-me-spec/main/install.ps1 | iex
 ```
 
 Works on macOS (system bash 3.2+), Linux, Git Bash, and Windows PowerShell 5.1+.
@@ -62,9 +62,9 @@ Works on macOS (system bash 3.2+), Linux, Git Bash, and Windows PowerShell 5.1+.
 Or clone straight into your agent's skills directory:
 
 ```bash
-git clone https://github.com/zhoujugui-web/grill-me-spec ~/.claude/skills/grill-me-spec   # Claude Code
-git clone https://github.com/zhoujugui-web/grill-me-spec ~/.codex/skills/grill-me-spec   # Codex
-git clone https://github.com/zhoujugui-web/grill-me-spec ~/.zcode/skills/grill-me-spec   # ZCode
+git clone https://github.com/JosephZjg/grill-me-spec ~/.claude/skills/grill-me-spec   # Claude Code
+git clone https://github.com/JosephZjg/grill-me-spec ~/.codex/skills/grill-me-spec   # Codex
+git clone https://github.com/JosephZjg/grill-me-spec ~/.zcode/skills/grill-me-spec   # ZCode
 ```
 
 > Mainland China? Clone the [Gitee mirror](https://gitee.com/gather_limon/grill-me-spec) instead — replace the GitHub URL above with `https://gitee.com/gather_limon/grill-me-spec`.
