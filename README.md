@@ -67,6 +67,8 @@ git clone https://github.com/zhoujugui-web/grill-me-spec ~/.codex/skills/grill-m
 git clone https://github.com/zhoujugui-web/grill-me-spec ~/.zcode/skills/grill-me-spec   # ZCode
 ```
 
+> Mainland China? Clone the [Gitee mirror](https://gitee.com/gather_limon/grill-me-spec) instead — replace the GitHub URL above with `https://gitee.com/gather_limon/grill-me-spec`.
+
 Or from a local clone: `./install.sh` / `.\install.ps1` (same auto-detection and flags).
 
 ## Use

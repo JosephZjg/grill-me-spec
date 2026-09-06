@@ -66,6 +66,8 @@ git clone https://github.com/zhoujugui-web/grill-me-spec ~/.codex/skills/grill-m
 git clone https://github.com/zhoujugui-web/grill-me-spec ~/.zcode/skills/grill-me-spec   # ZCode
 ```
 
+> 国内网络建议改用 [Gitee 镜像](https://gitee.com/gather_limon/grill-me-spec)：把上面的 GitHub 地址换成 `https://gitee.com/gather_limon/grill-me-spec` 即可。
+
 本地 clone 后也可以直接跑 `./install.sh` / `.\install.ps1`（探测逻辑与参数相同）。
 
 ## 用法
