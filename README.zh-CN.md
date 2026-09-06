@@ -1,5 +1,7 @@
 # grill-me-spec
 
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
 > 拷问方案，落成规范。
 
 一个把**无情访谈**与 **[OpenSpec](https://github.com/Fission-AI/OpenSpec)** 规范驱动工作流配对的 agent skill：一次一个问题地压力测试一个变更想法，然后把确认后的共识固化为一份通过校验的 OpenSpec 变更提案。

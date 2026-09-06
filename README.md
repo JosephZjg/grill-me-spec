@@ -1,5 +1,7 @@
 # grill-me-spec
 
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
 > Grill the plan. Ship the spec.
 
 An agent skill that pairs a **relentless interview** with **[OpenSpec](https://github.com/Fission-AI/OpenSpec)'s** spec-driven workflow: it stress-tests a change idea one question at a time, then captures the confirmed consensus as a validated OpenSpec change proposal.
