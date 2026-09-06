@@ -12,8 +12,12 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd || true)"
 if [[ -z "$repo_dir" || ! -f "$repo_dir/SKILL.md" ]]; then
   # Piped install (curl ... | bash): fetch the repo from GitHub instead.
   fetch_dir="$(mktemp -d)"
-  curl -fsSL "https://github.com/zhoujugui-web/grill-me-spec/archive/refs/heads/main.tar.gz" \
-    | tar -xz -C "$fetch_dir"
+  if ! curl -fsSL "https://github.com/zhoujugui-web/grill-me-spec/archive/refs/heads/main.tar.gz" \
+       | tar -xz -C "$fetch_dir"; then
+    echo "error: could not download from github.com (network restricted?)" >&2
+    echo "fallback: git clone https://github.com/zhoujugui-web/grill-me-spec ~/grill-me-spec && ~/grill-me-spec/install.sh" >&2
+    exit 1
+  fi
   repo_dir="$fetch_dir/grill-me-spec-main"
 fi
 
