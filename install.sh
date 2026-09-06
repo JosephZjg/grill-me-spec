@@ -1,15 +1,28 @@
 #!/usr/bin/env bash
 # Install grill-me-spec into an agent skills directory.
-# Usage: ./install.sh [--tool claude|codex|zcode] [--dest <path>]
+#
+# Usage:
+#   ./install.sh [--tool claude|codex|zcode] [--dest <path>]     # from a local clone
+#   curl -fsSL <raw-url>/install.sh | bash -s -- [--tool ...]    # one-liner
+#
+# Compatible with bash 3.2 (macOS system bash) and newer.
 set -euo pipefail
 
-repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd || true)"
+if [[ -z "$repo_dir" || ! -f "$repo_dir/SKILL.md" ]]; then
+  # Piped install (curl ... | bash): fetch the repo from GitHub instead.
+  fetch_dir="$(mktemp -d)"
+  curl -fsSL "https://github.com/zhoujugui-web/grill-me-spec/archive/refs/heads/main.tar.gz" \
+    | tar -xz -C "$fetch_dir"
+  repo_dir="$fetch_dir/grill-me-spec-main"
+fi
+
 tool=""
 dest=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --tool) tool="${2,,}"; shift 2 ;;
+    --tool) tool="$(printf '%s' "$2" | tr '[:upper:]' '[:lower:]')"; shift 2 ;;
     --dest) dest="$2"; shift 2 ;;
     *) echo "unknown argument: $1" >&2; exit 1 ;;
   esac

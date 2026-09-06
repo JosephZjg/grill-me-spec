@@ -47,7 +47,19 @@ grill-me-spec does not replace `explore`, `apply`, or `archive`. It replaces the
 
 ## Install
 
-Clone straight into your agent's skills directory (replace the URL with your fork):
+One-liner — auto-detects claude/codex/zcode (append `-s -- --tool <name>` or `-s -- --dest <path>` to choose explicitly):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/zhoujugui-web/grill-me-spec/main/install.sh | bash
+```
+
+```powershell
+irm https://raw.githubusercontent.com/zhoujugui-web/grill-me-spec/main/install.ps1 | iex
+```
+
+Works on macOS (system bash 3.2+), Linux, Git Bash, and Windows PowerShell 5.1+.
+
+Or clone straight into your agent's skills directory:
 
 ```bash
 git clone https://github.com/zhoujugui-web/grill-me-spec ~/.claude/skills/grill-me-spec   # Claude Code
@@ -55,12 +67,7 @@ git clone https://github.com/zhoujugui-web/grill-me-spec ~/.codex/skills/grill-m
 git clone https://github.com/zhoujugui-web/grill-me-spec ~/.zcode/skills/grill-me-spec   # ZCode
 ```
 
-Or from a local clone, use the installer (auto-detects claude/codex/zcode, or pass `--tool` / `--dest`):
-
-```bash
-./install.sh                 # macOS / Linux / Git Bash
-.\install.ps1                # Windows PowerShell
-```
+Or from a local clone: `./install.sh` / `.\install.ps1` (same auto-detection and flags).
 
 ## Use
 

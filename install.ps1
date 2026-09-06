@@ -1,11 +1,25 @@
 # Install grill-me-spec into an agent skills directory.
-# Usage: .\install.ps1 [-Tool claude|codex|zcode] [-Dest <path>]
+#
+# Usage:
+#   .\install.ps1 [-Tool claude|codex|zcode] [-Dest <path>]      # from a local clone
+#   irm <raw-url>/install.ps1 | iex                               # one-liner
+#
+# Compatible with Windows PowerShell 5.1 and PowerShell 7+.
 param(
   [string]$Tool = "",
   [string]$Dest = ""
 )
 
 $repo = $PSScriptRoot
+if (-not $repo -or -not (Test-Path "$repo\SKILL.md")) {
+  # Piped install (irm ... | iex): fetch the repo from GitHub instead.
+  $tmp = Join-Path ([IO.Path]::GetTempPath()) ("grill-me-spec-" + [IO.Path]::GetRandomFileName())
+  New-Item -ItemType Directory -Force -Path $tmp | Out-Null
+  $zip = Join-Path $tmp "grill-me-spec.zip"
+  Invoke-WebRequest "https://github.com/zhoujugui-web/grill-me-spec/archive/refs/heads/main.zip" -OutFile $zip
+  Expand-Archive $zip -DestinationPath $tmp -Force
+  $repo = Join-Path $tmp "grill-me-spec-main"
+}
 
 if (-not $Dest) {
   if (-not $Tool) {

@@ -46,7 +46,19 @@ grill-me-spec 不替代 `explore`、`apply`、`archive`，它替代的是 `propo
 
 ## 安装
 
-直接 clone 到你的 agent skills 目录（URL 换成你的 fork）：
+一行命令安装 —— 自动探测 claude/codex/zcode（要显式指定可追加 `-s -- --tool <名称>` 或 `-s -- --dest <路径>`）：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/zhoujugui-web/grill-me-spec/main/install.sh | bash
+```
+
+```powershell
+irm https://raw.githubusercontent.com/zhoujugui-web/grill-me-spec/main/install.ps1 | iex
+```
+
+兼容 macOS（系统自带 bash 3.2+）、Linux、Git Bash 和 Windows PowerShell 5.1+。
+
+或者直接 clone 到你的 agent skills 目录：
 
 ```bash
 git clone https://github.com/zhoujugui-web/grill-me-spec ~/.claude/skills/grill-me-spec   # Claude Code
@@ -54,12 +66,7 @@ git clone https://github.com/zhoujugui-web/grill-me-spec ~/.codex/skills/grill-m
 git clone https://github.com/zhoujugui-web/grill-me-spec ~/.zcode/skills/grill-me-spec   # ZCode
 ```
 
-或者从本地 clone 用安装脚本（自动探测 claude/codex/zcode，也可传 `--tool` / `--dest`）：
-
-```bash
-./install.sh                 # macOS / Linux / Git Bash
-.\install.ps1                # Windows PowerShell
-```
+本地 clone 后也可以直接跑 `./install.sh` / `.\install.ps1`（探测逻辑与参数相同）。
 
 ## 用法
 
