@@ -86,6 +86,8 @@ agent 会：
 
 完整示例（访谈片段 → 产出 artifact）：[examples/offline-cashier.md](examples/offline-cashier.md)。
 
+完整的生命周期流程——init → explore → grill → apply → verify → archive——见[工作流指南](docs/workflow.zh-CN.md)（[English](docs/workflow.md)）。
+
 ## 常见问题
 
 **需要先装 grill-me / grilling 吗？**

@@ -87,6 +87,8 @@ The agent will:
 
 A full worked example (interview excerpt → artifacts): [examples/offline-cashier.md](examples/offline-cashier.md).
 
+For the full lifecycle — init → explore → grill → apply → verify → archive — see the [workflow guide](docs/workflow.md)（[中文版](docs/workflow.zh-CN.md)）.
+
 ## FAQ
 
 **Do I need grill-me / grilling installed?**
